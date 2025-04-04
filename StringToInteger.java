@@ -1,13 +1,12 @@
 public class StringToInteger {
     public static void main(String[] args) {
-        String s = " 02210";
+        String s = "  123";
         System.out.println(myAtoi(s));
         
     }
 
     public static int myAtoi(String s){
 
-        // boolean skipZero = true;
         boolean signDeterminatorViewed = false;
         boolean isNegative = false;
         int result = 0;
@@ -15,20 +14,22 @@ public class StringToInteger {
         for(char c : s.toCharArray()){
             
             if(Character.isWhitespace(c)){
+                if(signDeterminatorViewed || result != 0){break;}
                 continue;
             } else if(c == '-' && !signDeterminatorViewed){
                 isNegative = true;
+                signDeterminatorViewed = true;
+            } else if(c == '+' && !signDeterminatorViewed) {
+                signDeterminatorViewed = true;
             } else if(Character.isDigit(c)){
-                if(c == 0 && skipZero){
-                    continue;
-                } else {
-                    // skipZero = true;
-                    signDeterminatorViewed = true;
-                    int digit = c - '0';
-
-                    result = result * 10 + digit;
+                signDeterminatorViewed = true;
+                int digit = c - '0';
+                if(result > (Integer.MAX_VALUE - digit) / 10){
+                    return isNegative ? Integer.MIN_VALUE : Integer.MAX_VALUE;
                 }
-            } else {
+                result = result * 10 + digit;
+            }
+            else {
                 break;
             }
 
@@ -37,6 +38,7 @@ public class StringToInteger {
         if(isNegative){
             result = result*(-1);
         }
+        
         return result;
     }
 }
