@@ -11,15 +11,17 @@ public class ValidParentheses {
 
     public static boolean isValid (String s) {
         Set<Character> openPar = new HashSet<>();
-        Deque<Character> stack = new ArrayDeque<Character>();
+        openPar.add('(');
+        openPar.add('[');
+        openPar.add('{');
+        
         Map<Character, Character> matching = new HashMap<>();
         matching.put(')', '(');
         matching.put(']', '[');
         matching.put('}', '{');
         
-        openPar.add('(');
-        openPar.add('[');
-        openPar.add('{');
+        Deque<Character> stack = new ArrayDeque<Character>();
+        
         for(char c : s.toCharArray()) {
             if(openPar.contains(c)){
                 stack.push(c);
