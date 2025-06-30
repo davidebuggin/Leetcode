@@ -16,10 +16,10 @@ public class BalancedBinaryTree {
         if (root == null)
             return true;
 
-        if(getHeight(root) == -1) {
+        if (getHeight(root) == -1) {
             return false;
         } else {
-           return true; 
+            return true;
         }
 
     }
