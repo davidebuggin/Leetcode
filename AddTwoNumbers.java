@@ -30,17 +30,6 @@ public class AddTwoNumbers {
         System.out.println();
     }
 }
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    public ListNode(int val) {
-        this.val = val;
-        this.next = null;
-    }
-}
-
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
