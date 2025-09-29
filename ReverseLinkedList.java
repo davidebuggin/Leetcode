@@ -1,3 +1,5 @@
+// Given the head of a singly linked list, reverse the list, and return the reversed list.
+
 public class ReverseLinkedList {
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
