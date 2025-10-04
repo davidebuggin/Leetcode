@@ -1,4 +1,4 @@
-//Given two binary strings a and b, return their sum as a binary string.
+// Es 67 - Given two binary strings a and b, return their sum as a binary string.
 
 public class AddBinary {
 

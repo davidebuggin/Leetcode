@@ -1,4 +1,4 @@
-//Given a binary tree, determine if it is height-balanced.
+// Es 110 - Given a binary tree, determine if it is height-balanced.
 
 public class BalancedBinaryTree {
     public static void main(String[] args) {
