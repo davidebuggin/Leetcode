@@ -1,4 +1,4 @@
-//Given a string s, return the longest palindromic substring in s.
+// Es 5 - Given a string s, return the longest palindromic substring in s.
 
 public class LongestPalindrominSubstring {
 

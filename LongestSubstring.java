@@ -1,4 +1,4 @@
-//Given a string s, find the length of the longest substring without duplicate characters.
+// Es 3 - Given a string s, find the length of the longest substring without duplicate characters.
 
 public class LongestSubstring {
     public static void main(String[] args) {
