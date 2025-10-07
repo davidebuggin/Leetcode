@@ -28,8 +28,7 @@ public class LetterCombinationsOfAPhoneNumber {
         return letterCombinations;
     }
 
-    public static void backtrack(String digits, int index, String current, List<String> letterCombinations,
-            Map<Character, String> map) {
+    public static void backtrack(String digits, int index, String current, List<String> letterCombinations, Map<Character, String> map) {
         if (index == digits.length()) {
             letterCombinations.add(current);
             return;
